@@ -12,3 +12,10 @@ c)
 This algorithm is also O(n) because the runtime will increase proportionally to the value of n.
 
 ## Exercise II
+
+1) Select a floor in the middle to start (```len(arr)//2```) and throw the egg off to see if it breaks.
+2) If the egg breaks, use the half with smaller numbers to move on; if it doesn't, use the larger half.
+3) Continue to half the results until the remaining results include just two floors.
+4) Out of those two floors, determine which floor the egg would break on, and which it wouldn't.
+
+Because we're using binary search, the time complexity is log(n).
