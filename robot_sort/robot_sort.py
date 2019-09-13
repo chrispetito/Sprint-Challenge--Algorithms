@@ -97,8 +97,19 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
-
+        # loop through list and set current index to i and smallest index to currentt
+        for i in range(0, len(l)):
+            current = i
+            smallest = current
+            # loop through list from current to end...
+            for x in range(current, len(l)):
+                # set the smallest index to x if that index is less than the current smallest...
+                if l[x] < l[smallest]:
+                    smallest = x
+            # swap smallest and current
+            l[smallest], l[current] = l[current], l[smallest]
+        # return list
+        return l
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
